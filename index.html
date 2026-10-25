@@ -2,7 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080b18">
-  <title>Entrecapa — Conectamos lo que importa</title>
+  <title>Entrecapa | Herramientas digitales y automatización</title>
+  <meta name="description" content="Entrecapa desarrolla herramientas digitales, automatizaciones y productos propios para resolver tareas concretas con menos fricción.">
+  <link rel="canonical" href="https://www.entrecapa.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Entrecapa | Herramientas digitales y automatización">
+  <meta property="og:description" content="Herramientas y automatizaciones para resolver tareas concretas. Productos propios y proyectos con alcance claro.">
+  <meta property="og:url" content="https://www.entrecapa.com/">
+  <meta property="og:image" content="https://www.entrecapa.com/assets/entrecapa-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Entrecapa: entre lo que tienes y lo que necesitas">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/entrecapa-favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -59,15 +71,59 @@
     @media(max-width:520px){.hero{gap:8px}.layerstage{min-height:440px}.promise{padding-bottom:48px}.card{min-height:260px}.audience{padding-bottom:24px}.proof{padding-top:56px;padding-bottom:56px}.productbrand{min-height:320px}.closing{padding-top:72px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orbit{animation:none}.layer,.core,.layer-tabs,.button,.card,.back,.mini div{transition:none!important}}
   </style>
+  <style>
+    .hero-secondary{color:#d8dff0;text-decoration:none;border-bottom:1px solid #7683ac;padding-bottom:4px;font:500 10px DM Mono;text-transform:uppercase}.hero-secondary:hover{color:var(--acid);border-color:var(--acid)}
+    .services{padding:92px 4vw 110px;background:#090d1d}.services-shell{max-width:1540px;margin:auto}.services-head{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;margin-bottom:40px}.services-head h2{font-size:clamp(45px,6vw,78px);line-height:.92;letter-spacing:-.065em;margin:0}.services-head p{color:#b8c1d8;font-size:16px;line-height:1.75;margin:0}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.service-card{min-height:285px;padding:28px;border:1px solid #67739e;background:linear-gradient(145deg,#ffffff09,#ffffff02);display:flex;flex-direction:column}.service-card small{font:500 9px DM Mono;color:var(--acid);letter-spacing:.09em}.service-card h3{font-size:28px;line-height:1.05;letter-spacing:-.04em;margin:60px 0 14px}.service-card p{margin:0;color:#aeb8d0;font:400 12px/1.7 DM Mono}.service-card strong{margin-top:auto;padding-top:22px;font:500 9px DM Mono;color:#eef1fb;text-transform:uppercase}.product:first-of-type .productcopy .tag{color:#45652a}.navlinks{font-size:11px}.navlinks .contact,.button{font-size:11px}
+    @media(max-width:880px){.services-head,.service-grid{grid-template-columns:1fr}.services-head{gap:24px}.service-card{min-height:230px}.service-card h3{margin-top:38px}}
+    @media(max-width:520px){.hero-secondary{font-size:9px}.services{padding:70px 20px}.services-head h2{font-size:44px}.service-card{min-height:215px}}
+  </style>
+  <style>
+    /* El diagrama móvil debe quedar completamente contenido en el viewport. */
+    @media(max-width:520px){
+      .layerstage{min-height:400px;margin:0;overflow:hidden;overflow:clip;clip-path:inset(0)}
+      .layer{width:76%;height:45%;left:12%;top:25%;padding:16px}
+      .layer.one{transform:translate(-18px,32px) rotate(-8deg) skewX(3deg) scaleY(.82)}
+      .layer.two{transform:rotate(-8deg) skewX(3deg) scaleY(.82);overflow:hidden}
+      .layer.three{transform:translate(18px,-32px) rotate(-8deg) skewX(3deg) scaleY(.82)}
+      .layerstage.expanded .one{transform:translate(-26px,50px) rotate(-8deg) skewX(3deg) scaleY(.82)}
+      .layerstage.expanded .three{transform:translate(26px,-50px) rotate(-8deg) skewX(3deg) scaleY(.82)}
+      .layer strong,.layer.two strong{top:15px;left:15px;font-size:9px}
+      .orbit{inset:10% 7%}
+      .core{top:47%;width:176px;height:176px;padding:21px}
+      .layerstage.expanded .core{width:184px;height:184px}
+      .core strong{font-size:16px}.core-copy{font-size:8px;line-height:1.45}.core-action{font-size:7px}
+      .closing{padding:64px 20px calc(36px + env(safe-area-inset-bottom));overflow:hidden;contain:paint}
+      .closing h2{max-width:100%;margin:22px auto 34px;font-size:clamp(40px,13vw,48px);line-height:.9;text-wrap:balance}
+      .closing h2 span{display:block;max-width:100%}
+      .closing .button{max-width:100%;white-space:normal;line-height:1.35;text-align:center}
+      .closing .legal{max-width:100%;overflow-wrap:anywhere;margin-top:28px}
+    }
+    @media(max-width:350px){.closing h2{font-size:40px}.closing .button{width:100%;padding-inline:10px}}
+  </style>
+  <style>
+    /* WebKit/WhatsApp: keep transformed artwork from creating a sideways page. */
+    html,body{width:100%;max-width:100%;overflow-x:hidden!important;overscroll-behavior-x:none}
+    body{position:relative;touch-action:pan-y pinch-zoom}
+    main,.nav,.hero,.ribbon,.promise,.audience,.statement,.proof,.services,.closing{max-width:100%}
+    @media(max-width:520px){
+      .hero{width:100%;margin-inline:0}
+      .layerstage{width:100%;max-width:100%;margin-inline:0}
+      .layer{max-width:76%}
+      .statement{grid-template-columns:minmax(0,1fr)}
+      .statement>*,.mini,.mini>div{min-width:0;max-width:100%}
+      .mini div:nth-child(2),.mini div:nth-child(3){transform:none}
+    }
+  </style>
 </head>
 <body>
-  <nav class="nav"><a class="logo" href="/" aria-label="Entrecapa — inicio"><img src="logo/intervalo/assets/entrecapa-horizontal-white.svg" alt="Entrecapa"></a><div class="navlinks"><a href="#metodo">Cómo trabajamos</a><a href="#para-quien">Para quién</a><a href="#casos">Casos</a><a class="contact" href="#contacto">Conectar una idea ↗</a></div></nav>
-  <main><section class="hero"><div class="copy"><span class="kicker">Estudio de sistemas y herramientas digitales</span><h1>Entre lo que tienes<br>y lo que <span>necesitas.</span></h1><p class="lead">Conectamos personas, procesos y tecnología para que el trabajo fluya con menos fricción y más sentido.</p><div class="actions"><a class="button" href="#contacto">Cuéntanos qué no conecta ↗</a><span class="micro">OBSERVAR · CONECTAR<br>CONSTRUIR · ENTREGAR</span></div></div><div class="layerstage" id="layerstage" data-active="overview"><i class="orbit" aria-hidden="true"></i><button type="button" class="layer one" data-layer="people" aria-label="Personas" aria-pressed="false"><strong>Personas</strong><em>Objetivos · decisiones · experiencia</em></button><button type="button" class="layer two" data-layer="process" aria-label="Procesos" aria-pressed="false"><strong>Procesos</strong><em>Pasos · fricciones · repeticiones</em></button><button type="button" class="layer three" data-layer="technology" aria-label="Tecnología" aria-pressed="false"><strong>Tecnología</strong><em>Herramientas · datos · automatización</em></button><button type="button" class="core" id="layerCore" aria-label="Abrir o unir las capas" aria-expanded="false"><span class="core-kicker" id="coreKicker">El punto de encuentro</span><strong id="coreTitle">Entrecapa</strong><span class="core-copy" id="coreCopy" aria-live="polite">Una solución nace cuando contexto, recorrido y tecnología se entienden juntos.</span><small class="core-action" id="coreAction">Pulsa para abrir</small></button><div class="layer-tabs" aria-label="Explorar capas"><button type="button" data-select="people" aria-pressed="false">Personas</button><button type="button" data-select="process" aria-pressed="false">Procesos</button><button type="button" data-select="technology" aria-pressed="false">Tecnología</button><button type="button" data-select="overview" aria-pressed="false">Conexión</button></div></div></section>
+  <nav class="nav"><a class="logo" href="/" aria-label="Entrecapa — inicio"><img src="logo/intervalo/assets/entrecapa-horizontal-white.svg" alt="Entrecapa"></a><div class="navlinks"><a href="#productos">Productos</a><a href="#servicios">Servicios</a><a href="#metodo">Cómo trabajamos</a><a class="contact" href="#contacto">Plantear un problema ↗</a></div></nav>
+  <main><section class="hero"><div class="copy"><span class="kicker">Estudio de sistemas y herramientas digitales</span><h1>Entre lo que tienes<br>y lo que <span>necesitas.</span></h1><p class="lead">Desarrollamos herramientas digitales y automatizaciones para resolver tareas concretas. También creamos productos propios que puedes probar y, cuando estén listos, utilizar por suscripción.</p><div class="actions"><a class="button" href="#productos">Conocer los productos ↗</a><a class="hero-secondary" href="#contacto">Plantear un problema</a></div></div><div class="layerstage" id="layerstage" data-active="overview"><i class="orbit" aria-hidden="true"></i><button type="button" class="layer one" data-layer="people" aria-label="Personas" aria-pressed="false"><strong>Personas</strong><em>Objetivos · decisiones · experiencia</em></button><button type="button" class="layer two" data-layer="process" aria-label="Procesos" aria-pressed="false"><strong>Procesos</strong><em>Pasos · fricciones · repeticiones</em></button><button type="button" class="layer three" data-layer="technology" aria-label="Tecnología" aria-pressed="false"><strong>Tecnología</strong><em>Herramientas · datos · automatización</em></button><button type="button" class="core" id="layerCore" aria-label="Abrir o unir las capas" aria-expanded="false"><span class="core-kicker" id="coreKicker">El punto de encuentro</span><strong id="coreTitle">Entrecapa</strong><span class="core-copy" id="coreCopy" aria-live="polite">Una solución nace cuando contexto, recorrido y tecnología se entienden juntos.</span><small class="core-action" id="coreAction">Pulsa para abrir</small></button><div class="layer-tabs" aria-label="Explorar capas"><button type="button" data-select="people" aria-pressed="false">Personas</button><button type="button" data-select="process" aria-pressed="false">Procesos</button><button type="button" data-select="technology" aria-pressed="false">Tecnología</button><button type="button" data-select="overview" aria-pressed="false">Conexión</button></div></div></section>
     <section class="ribbon"><div><b>01 · OBSERVAR</b><span>El trabajo tal como sucede</span></div><div><b>02 · CONECTAR</b><span>Lo que ya existe</span></div><div><b>03 · CONSTRUIR</b><span>Solo lo que falta</span></div><div><b>04 · SIMPLIFICAR</b><span>Sin crear dependencia</span></div></section>
     <section class="promise" id="metodo"><div class="sectionhead"><h2>No añadimos otra capa de complejidad.</h2><p>Trabajamos en el espacio entre una necesidad y las herramientas disponibles. Ahí diseñamos una solución proporcionada, la probamos en el trabajo real y dejamos todo conectado y bajo tu control.</p></div><div class="flow"><article class="card c1"><span class="n">CAPA 01 / CONTEXTO</span><h3>Entender antes de proponer.</h3><p>Escuchamos a quien hace el trabajo, trazamos el recorrido y encontramos la fricción que merece resolverse.</p></article><article class="card c2"><span class="n">CAPA 02 / PROTOTIPO</span><h3>Hacer visible la solución.</h3><p>Construimos algo pequeño y real para decidir con experiencia, no con diapositivas ni promesas.</p></article><article class="card c3"><span class="n">CAPA 03 / SISTEMA</span><h3>Integrar sin encerrar.</h3><p>Conectamos la solución, documentamos las decisiones y entregamos una herramienta mantenible.</p></article></div></section>
     <section class="audience" id="para-quien"><div class="audience-shell"><div class="audience-intro"><span class="kicker">Para quién construimos</span><h2>Para personas y equipos que quieren trabajar mejor.</h2><p>Desde una persona con un proceso propio hasta un equipo dentro de una organización grande. Si hay una tarea que consume tiempo, dispersa información o depende de demasiados pasos, podemos convertirla en una herramienta útil.</p></div><div class="audience-list"><article class="audience-row"><span>01</span><div><strong>Autónomos y emprendedores</strong><p>Una idea o una forma de trabajar que necesita convertirse en algo real, sencillo y sostenible.</p></div></article><article class="audience-row"><span>02</span><div><strong>Pymes y equipos</strong><p>Procesos que han crecido, información que vive en demasiados sitios y tareas que frenan el trabajo diario.</p></div></article><article class="audience-row"><span>03</span><div><strong>Organizaciones</strong><p>Un problema concreto dentro de una estructura mayor que merece una solución proporcionada y bien integrada.</p></div></article></div><div class="human-principle"><span>Nuestro criterio</span><p><strong>La tecnología se ocupa de la fricción.</strong> Las personas conservan el criterio.</p></div></div></section>
     <section class="statement"><div class="quote"><small>Nuestra posición</small><blockquote>No vendemos IA.<br><span>Desatascamos trabajo.</span></blockquote></div><div class="systemmap"><div class="mini"><div><span>Información dispersa</span><b>↓</b></div><div><span>Entrecapa</span><b>Conecta</b></div><div><span>Herramienta útil</span><b>↓</b></div><div><span>Trabajo que avanza</span><b>✓</b></div></div></div></section>
-    <section class="proof" id="casos"><h2>Construimos productos.<br>No solo propuestas.</h2><article class="product veinat"><div class="productbrand"><strong>Veïnat</strong><span>PRODUCTO EN PILOTO</span></div><div class="productcopy"><span class="tag">Apuesta principal · Comunidades de propietarios</span><h3>La comunidad conectada, aunque cambie quien la gestiona.</h3><p>Veïnat reúne documentos, personas, incidencias, juntas y decisiones en un expediente común. El piloto empieza poniendo orden y midiendo el trabajo que realmente ahorra.</p><div class="details"><span>Expediente · Juntas · Incidencias</span><a class="case-link" href="https://veinat.entrecapa.com/" target="_blank" rel="noopener noreferrer">Conocer el piloto ↗</a></div></div></article><article class="product"><div class="productbrand"><strong>Vision<br>HSCode</strong><span>PRODUCTO PROFESIONAL</span></div><div class="productcopy"><span class="tag">Inteligencia arancelaria</span><h3>Una capa entre la evidencia y la decisión.</h3><p>VisionHSCode investiga productos y convierte texto, imágenes y documentos en propuestas HS, NC y TARIC trazables, siempre preparadas para revisión profesional.</p><div class="details"><span>Clasificación · Fuentes · Medidas</span><a class="case-link" href="https://visionhscode.com/" target="_blank" rel="noopener noreferrer">Abrir producto ↗</a></div></div></article><article class="product query"><div class="productbrand"><strong>Vision<br>HSQuery</strong><span>DEMOSTRADOR</span></div><div class="productcopy"><span class="tag">Caso de estudio · Operativa aduanera</span><h3>Una consulta oficial convertida en una herramienta útil.</h3><p>VisionHSQuery demuestra cómo una operativa autorizada puede reunirse y presentarse sin recorrer pantallas ni reorganizar resultados manualmente. No está en comercialización activa.</p><div class="details"><span>Consulta · Agrupación · Copia directa</span><a class="case-link" href="#contacto">Consultar el caso ↘</a></div></div></article></section>
+    <section class="proof" id="productos"><h2>Productos y proyectos.<br>Algo concreto que probar.</h2><article class="product veinat"><div class="productbrand"><strong>Veïnat</strong><span>PRODUCTO EN PILOTO</span></div><div class="productcopy"><span class="tag">Piloto para comunidades y administradores · Cataluña</span><h3>La comunidad conectada, aunque cambie quien la gestiona.</h3><p>Veïnat reúne documentos, personas, incidencias, juntas y decisiones en un expediente común. Puedes explorar una demo con datos ficticios o solicitar un piloto acompañado.</p><div class="details"><span>Expediente · Juntas · Incidencias</span><a class="case-link" href="https://veinat.entrecapa.com/" target="_blank" rel="noopener noreferrer">Conocer el piloto ↗</a></div></div></article><article class="product"><div class="productbrand"><strong>Vision<br>HSCode</strong><span>PRODUCTO PROFESIONAL</span></div><div class="productcopy"><span class="tag">Inteligencia arancelaria</span><h3>Una capa entre la evidencia y la decisión.</h3><p>VisionHSCode investiga productos y convierte texto, imágenes y documentos en propuestas HS, NC y TARIC trazables, siempre preparadas para revisión profesional.</p><div class="details"><span>Clasificación · Fuentes · Medidas</span><a class="case-link" href="https://app.visionhscode.com/tool" target="_blank" rel="noopener noreferrer">Conocer y probar el producto ↗</a></div></div></article><article class="product query"><div class="productbrand"><strong>Vision<br>HSQuery</strong><span>DEMOSTRADOR</span></div><div class="productcopy"><span class="tag">Caso de estudio · Operativa aduanera</span><h3>Una consulta oficial convertida en una herramienta útil.</h3><p>VisionHSQuery demuestra cómo una operativa autorizada puede reunirse y presentarse sin recorrer pantallas ni reorganizar resultados manualmente. No está en comercialización activa.</p><div class="details"><span>Consulta · Agrupación · Copia directa</span><a class="case-link" href="#contacto">Hablar sobre un proyecto similar ↘</a></div></div></article></section>
+    <section class="services" id="servicios"><div class="services-shell"><div class="services-head"><h2>Qué puedes encargarnos.</h2><p>Empezamos por una fricción de trabajo concreta. El encargo termina con un resultado que se puede revisar, utilizar y mantener; no con una conversación abierta sin alcance.</p></div><div class="service-grid"><article class="service-card"><small>01 · REVISIÓN</small><h3>Entender un proceso.</h3><p>Localizamos repeticiones, esperas, información dispersa y dependencias innecesarias.</p><strong>Recibes un mapa, prioridades y una propuesta de intervención.</strong></article><article class="service-card"><small>02 · CONSTRUCCIÓN</small><h3>Crear una solución.</h3><p>Diseñamos y probamos una automatización o una herramienta pequeña con criterios claros.</p><strong>Recibes una solución funcional y un alcance verificable.</strong></article><article class="service-card"><small>03 · IMPLANTACIÓN</small><h3>Dejarla funcionando.</h3><p>Conectamos la solución con el trabajo real, documentamos decisiones y acordamos la continuidad.</p><strong>Recibes puesta en marcha, documentación y soporte definido.</strong></article></div></div></section>
     <section class="closing" id="contacto"><span class="kicker">PILOTOS Y PROYECTOS CON ALCANCE CLARO</span><h2>Empecemos por el problema<br><span>que merece resolverse.</span></h2><a class="button" href="mailto:chia.clerk@gmail.com?subject=Quiero%20hablar%20con%20Entrecapa">Empezar una conversación ↗</a><p class="legal">© 2026 Entrecapa · Sistemas y herramientas digitales.</p></section>
   </main>
   <script>
@@ -85,5 +141,30 @@
     function resetLayers(){stage.classList.remove('expanded');stage.dataset.active='overview';const x=content.overview;document.getElementById('coreKicker').textContent=x.kicker;document.getElementById('coreTitle').textContent=x.title;document.getElementById('coreCopy').textContent=x.copy;document.getElementById('coreAction').textContent=x.action;updateControls('none')}
     core.addEventListener('click',()=>{if(!stage.classList.contains('expanded')){stage.classList.add('expanded');core.setAttribute('aria-expanded','true');document.getElementById('coreAction').textContent='Toca una capa para explorar';return}resetLayers()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&stage.classList.contains('expanded')){resetLayers();core.focus()}});
+
+    // WebKit permite arrastrar el documento más allá de su final aunque la raíz
+    // use overscroll-behavior. Evitamos solo ese gesto inferior para que el pie
+    // no deje al descubierto una pantalla vacía en navegadores integrados.
+    let lastTouchY=0;
+    document.addEventListener('touchstart',e=>{if(e.touches.length===1)lastTouchY=e.touches[0].clientY},{passive:true});
+    document.addEventListener('touchmove',e=>{
+      if(e.touches.length!==1)return;
+      const touchY=e.touches[0].clientY;
+      const movingPastBottom=touchY<lastTouchY&&window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-2;
+      if(movingPastBottom)e.preventDefault();
+      lastTouchY=touchY;
+    },{passive:false});
+
+    // Some embedded WebKit views retain a horizontal scroll offset after a
+    // transformed element receives focus. The page has no horizontal content,
+    // so always restore its only valid x position.
+    function keepPageOnAxis(){
+      const root=document.scrollingElement||document.documentElement;
+      if(root.scrollLeft!==0)root.scrollLeft=0;
+      if(document.body.scrollLeft!==0)document.body.scrollLeft=0;
+    }
+    window.addEventListener('pageshow',keepPageOnAxis);
+    window.addEventListener('resize',keepPageOnAxis,{passive:true});
+    document.addEventListener('scroll',keepPageOnAxis,{passive:true});
   </script>
 </body></html>

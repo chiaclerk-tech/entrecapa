@@ -1,0 +1,4 @@
+/quienes-somos /404.html 404
+/quienes-somos/ /404.html 404
+/quienes-somos/* /404.html 404
+/assets/people/* /404.html 404

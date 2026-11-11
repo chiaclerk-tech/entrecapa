@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f2ec" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="description" content="Herramienta interactiva para completar la Rueda de la Vida y la Rueda Emprendedora." />
+    <link rel="canonical" href="https://www.entrecapa.com/rueda/" />
+    <link rel="icon" href="assets/entrecapa-mark.svg" type="image/svg+xml" />
+    <title>Mi rueda de la vida | Entrecapa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <span class="eyebrow">CO-CREACIÓN DE PODER</span>
+          <h1 id="pageTitle">Mi rueda de la vida</h1>
+          <p id="pageSubtitle">Colorea cada área desde el centro hasta reflejar cómo te sientes hoy.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="entrecapa-signature" href="/" aria-label="Visitar Entrecapa">
+            <span>Una herramienta de</span>
+            <img src="assets/entrecapa-horizontal-black.svg" alt="Entrecapa" width="141" height="30" />
+          </a>
+          <button class="icon-button" id="helpButton" aria-label="Ver instrucciones" title="Instrucciones">?</button>
+        </div>
+      </header>
+
+      <nav class="wheel-tabs" role="tablist" aria-label="Elige una rueda">
+        <button class="wheel-tab active" id="lifeTab" role="tab" aria-selected="true" data-wheel="life">
+          <span>1</span> Vida
+        </button>
+        <button class="wheel-tab" id="businessTab" role="tab" aria-selected="false" data-wheel="business">
+          <span>2</span> Emprendimiento
+        </button>
+      </nav>
+
+      <section class="workspace">
+        <aside class="panel controls" aria-label="Herramientas de color">
+          <div class="panel-section">
+            <span class="section-label">Color</span>
+            <div class="palette" id="palette" role="radiogroup" aria-label="Paleta de colores"></div>
+          </div>
+
+          <div class="panel-section compact">
+            <button class="tool-button active" id="paintButton" data-tool="paint" aria-pressed="true">
+              <span aria-hidden="true">●</span> Pintar
+            </button>
+            <button class="tool-button" id="eraseButton" data-tool="erase" aria-pressed="false">
+              <span aria-hidden="true">○</span> Borrar
+            </button>
+          </div>
+
+          <div class="panel-section compact two-columns">
+            <button class="secondary-button" id="undoButton" title="Deshacer (Ctrl+Z)">↶ Deshacer</button>
+            <button class="secondary-button" id="redoButton" title="Rehacer (Ctrl+Y)">↷ Rehacer</button>
+          </div>
+
+          <div class="panel-section hint">
+            <strong>Cómo se usa</strong>
+            <p>Señala un nivel y haz clic o arrastra. El área se rellenará desde el centro hasta ese nivel.</p>
+          </div>
+        </aside>
+
+        <section class="wheel-card" aria-label="Rueda de la vida interactiva">
+          <div class="wheel-wrap" id="wheelWrap">
+            <svg id="lifeWheel" viewBox="0 0 760 760" role="img" aria-labelledby="wheelTitle wheelDesc">
+              <title id="wheelTitle">Rueda de la vida interactiva</title>
+              <desc id="wheelDesc">Ocho áreas divididas en diez niveles que pueden colorearse.</desc>
+              <g id="cells"></g>
+              <g id="labels"></g>
+              <circle cx="380" cy="380" r="27" class="wheel-center" />
+              <text x="380" y="374" class="center-number">10</text>
+              <text x="380" y="393" class="center-caption">NIVELES</text>
+            </svg>
+            <div class="drag-tip" id="dragTip">Elige un nivel del 1 al 10</div>
+          </div>
+
+          <div class="mobile-toolbar" aria-label="Herramientas rápidas">
+            <button id="mobilePaint" class="mobile-tool active" aria-label="Pintar">●</button>
+            <button id="mobileErase" class="mobile-tool" aria-label="Borrar">○</button>
+            <div class="mobile-color" id="mobileColor" aria-hidden="true"></div>
+            <button id="mobileUndo" class="mobile-tool" aria-label="Deshacer">↶</button>
+            <button id="mobileRedo" class="mobile-tool" aria-label="Rehacer">↷</button>
+          </div>
+        </section>
+
+        <aside class="panel result-panel" aria-label="Resumen y acciones">
+          <div class="panel-section">
+            <span class="section-label">Tus categorías</span>
+            <div class="area-list" id="areaList"></div>
+            <button class="add-area-button" id="addAreaButton" type="button">＋ Añadir categoría</button>
+          </div>
+
+          <div class="panel-section actions">
+            <button class="primary-button" id="downloadButton">Descargar imagen</button>
+            <button class="secondary-button full" id="printButton">Imprimir / PDF</button>
+            <button class="text-button" id="resetButton">Empezar de nuevo</button>
+          </div>
+          <p class="save-note"><span aria-hidden="true">✓</span> Se guarda automáticamente en este dispositivo</p>
+        </aside>
+      </section>
+
+      <section class="journal" aria-labelledby="journalTitle">
+        <div class="journal-heading">
+          <div>
+            <span class="eyebrow">REFLEXIONA SOBRE TU RUEDA</span>
+            <h2 id="journalTitle">Preguntas y respuestas</h2>
+            <p>Añade tus propias preguntas en cada área y guarda las respuestas junto a tu rueda.</p>
+          </div>
+          <div class="journal-actions">
+            <button class="primary-button add-question" id="addQuestionButton">+ Añadir pregunta</button>
+            <button class="secondary-button" id="saveQuestionsButton">Guardar preguntas</button>
+            <button class="text-button restore-questions" id="restoreQuestionsButton">Restablecer originales</button>
+            <span class="question-save-status" id="questionSaveStatus" aria-live="polite"></span>
+          </div>
+        </div>
+        <div class="area-tabs" id="areaTabs" role="tablist" aria-label="Selecciona un área"></div>
+        <div class="question-list" id="questionList" aria-live="polite"></div>
+        <div class="empty-questions" id="emptyQuestions">
+          <span aria-hidden="true">✦</span>
+          <strong>Aún no hay preguntas en esta área</strong>
+          <p>Puedes añadir preguntas como «¿Qué quiero mejorar?» o «¿Qué pequeño paso puedo dar esta semana?»</p>
+          <button class="secondary-button" id="emptyAddButton">Añadir la primera pregunta</button>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="helpDialog">
+      <button class="dialog-close" id="closeHelp" aria-label="Cerrar">×</button>
+      <span class="eyebrow">GUÍA RÁPIDA</span>
+      <h2>Construye tu rueda</h2>
+      <ol>
+        <li>Elige un color de la paleta.</li>
+        <li>Pinta desde el centro hacia fuera en cada área.</li>
+        <li>Un nivel bajo indica poca satisfacción; el 10, satisfacción plena.</li>
+        <li>Cambia los nombres de las áreas tocando sobre ellos en la lista.</li>
+        <li>Descarga o imprime tu rueda cuando termines.</li>
+      </ol>
+      <button class="primary-button" id="startButton">Empezar</button>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>

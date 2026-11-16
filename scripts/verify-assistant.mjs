@@ -68,27 +68,27 @@ await page.screenshot({path:'/tmp/entrecapa-assistant-v4-conversation-390.png',f
 await page.close();
 
 const therapist=await browser.newPage({viewport:{width:390,height:844}});
-const therapistReplies=[];
-therapist.on('response',async response=>{
-  if(response.url().endsWith('/api/assistant')&&response.ok())therapistReplies.push(await response.json());
-});
 await therapist.goto(baseUrl,{waitUntil:'networkidle'});
 await therapist.locator('#ecAssistantLauncher').click();
 const therapistInput=therapist.locator('#ecAssistantInput');
 const therapistSend=async value=>{
   const before=await therapist.locator('.ec-message.bot:not(.typing)').count();
   await therapistInput.fill(value);
+  const responsePromise=therapist.waitForResponse(response=>response.url().endsWith('/api/assistant')&&response.ok());
   await therapist.locator('#ecAssistantForm button[type="submit"]').click();
+  const response=await responsePromise;
+  const body=await response.json();
   await therapist.waitForFunction(expected=>document.querySelectorAll('.ec-message.bot:not(.typing)').length>expected,before);
+  return body;
 };
 await therapistSend('Soy terapeuta y vendo sesiones, bonos y programas con varias plazas. ¿Qué incluye exactamente Pulso Pro en mi caso?');
 const pulsoDetail=await therapist.locator('.ec-message.bot:not(.typing)').last().textContent();
 const pulsoFeatureFamilies=[/bonos|saldo|cr[eé]ditos/i,/programas|ediciones|sesiones/i,/aforo|inscripciones/i,/recursos|biblioteca/i,/pagos|Stripe/i,/clientes|ficha/i].filter(pattern=>pattern.test(pulsoDetail)).length;
 assert.ok(pulsoFeatureFamilies>=3,`Pulso detail lacks product depth: ${pulsoDetail}`);
 assert.doesNotMatch(pulsoDetail,/historias cl[ií]nicas|comisiones de equipo|m[uú]ltiples cabinas/i);
-await therapistSend('Necesito cobrar, controlar inscripciones y compartir recursos. ¿Cuánto cuesta?');
-assert.equal(therapistReplies.at(-1).recommended_offer,'pulso_pro');
-assert.equal(therapistReplies.at(-1).include_price,true);
+const pulsoPriceResponse=await therapistSend('Necesito cobrar, controlar inscripciones y compartir recursos. ¿Cuánto cuesta?');
+assert.equal(pulsoPriceResponse.recommended_offer,'pulso_pro');
+assert.equal(pulsoPriceResponse.include_price,true);
 const therapistReply=await therapist.locator('.ec-message.bot:not(.typing)').last().textContent();
 assert.match(therapistReply,/2\.450 € de implantación \+ 179 €\/mes/);
 assert.match(therapistReply,/sin IVA/i);

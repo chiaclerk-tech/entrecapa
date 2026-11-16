@@ -200,6 +200,19 @@ const parseModelResponse=result=>{
   };
 };
 
+const applyPriceRules=(data,messages)=>{
+  const latest=messages.at(-1)?.content||'';
+  const priceRequested=/\b(cu[aá]nto|precio|precios|coste|costes|tarifa|tarifas|presupuesto)\b/i.test(latest);
+  if(priceRequested&&data.recommended_offer!=='none')data.include_price=true;
+  if(data.include_price){
+    const approved=OFFER_PRICES[data.recommended_offer];
+    if(approved&&!data.reply.includes(approved)){
+      data.reply=`${data.reply}\n\nComo referencia: ${approved} Importes sin IVA; servicios de terceros aparte.`;
+    }
+  }
+  return data;
+};
+
 const applyHandoffRules=(data,messages)=>{
   const latest=messages.at(-1)?.content||'';
   const contactRequested=/\b(contact(?:ar|o)?|hablar|llamad[ao]|reuni[oó]n|cita|correo|presupuesto)\b/i.test(latest);
@@ -235,7 +248,7 @@ export async function onRequestPost({request,env}){
       top_p:0.9,
       response_format:{type:'json_schema',json_schema:responseSchema}
     });
-    return json(applyHandoffRules(parseModelResponse(result),messages));
+    return json(applyHandoffRules(applyPriceRules(parseModelResponse(result),messages),messages));
   }catch{
     return json({error:'No he podido responder ahora mismo. Puedes intentarlo de nuevo en unos segundos.'},502);
   }

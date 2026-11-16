@@ -64,6 +64,23 @@ assert.match(pricedBody.reply,/2\.450 € de implantación \+ 179 €\/mes/);
 assert.match(pricedBody.reply,/sin IVA/i);
 
 modelResponse={
+  reply:'Pulso Pro reúne bonos, programas, aforo, inscripciones y recursos en una misma operativa.',
+  stage:'qualify',
+  offer_contact:false,
+  recommended_offer:'pulso_pro',
+  include_price:false,
+  lead_summary:{business:'terapeuta',need:'bonos y programas',goal:'centralizar la operativa'}
+};
+const deterministicPrice=await onRequestPost({
+  request:request({messages:[{role:'user',content:'Necesito bonos y programas. ¿Cuánto cuesta Pulso Pro?'}]}),
+  env
+});
+const deterministicPriceBody=await deterministicPrice.json();
+assert.equal(deterministicPriceBody.include_price,true);
+assert.equal(deterministicPriceBody.offer_contact,true);
+assert.match(deterministicPriceBody.reply,/2\.450 € de implantación \+ 179 €\/mes/);
+
+modelResponse={
   reply:'Te costaría 99.999 € y resolvería todo.',
   stage:'qualify',
   offer_contact:false,

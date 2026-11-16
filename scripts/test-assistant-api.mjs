@@ -54,6 +54,8 @@ assert.equal(priced.status,200);
 const pricedBody=await priced.json();
 assert.equal(pricedBody.recommended_offer,'pulso_pro');
 assert.equal(pricedBody.include_price,true);
+assert.equal(pricedBody.offer_contact,true);
+assert.equal(pricedBody.stage,'handoff');
 assert.match(pricedBody.reply,/2\.450 € de implantación \+ 179 €\/mes/);
 assert.match(pricedBody.reply,/sin IVA/i);
 
@@ -72,6 +74,7 @@ const repaired=await onRequestPost({
 const repairedBody=await repaired.json();
 assert.doesNotMatch(repairedBody.reply,/99\.999/);
 assert.match(repairedBody.reply,/Web Esencial: 990 €/);
+assert.equal(repairedBody.offer_contact,true);
 
 modelResponse={
   reply:'Un proceso operativo encaja con lo que describes y evitaría repetir el mismo dato en varias herramientas.',

@@ -186,7 +186,7 @@ const applyHandoffRules=(data,messages)=>{
   const contactRequested=/\b(contact(?:ar|o)?|hablar|llamad[ao]|reuni[oó]n|cita|correo|presupuesto)\b/i.test(latest);
   const userTurns=messages.filter(message=>message.role==='user').length;
   const qualified=userTurns>=3&&data.lead_summary.business&&data.lead_summary.need&&data.lead_summary.goal;
-  if(!contactRequested&&!qualified)return data;
+  if(!contactRequested&&!qualified&&!data.include_price)return data;
   data.offer_contact=true;
   data.stage='handoff';
   if(!/Eloy|correo|contact|hablar/i.test(data.reply)){

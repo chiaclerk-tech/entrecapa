@@ -89,6 +89,7 @@ const therapistReply=await therapist.locator('.ec-message.bot:not(.typing)').las
 assert.match(therapistReply,/2\.450 € de implantación \+ 179 €\/mes/);
 assert.match(therapistReply,/sin IVA/i);
 assert.ok((therapistReply.match(/\?/g)||[]).length<=1,'therapist price reply asks more than one question');
+await therapist.locator('.ec-assistant-mail').waitFor({state:'visible',timeout:5000});
 await therapist.screenshot({path:'/tmp/entrecapa-assistant-v4-therapist-390.png',fullPage:true});
 await therapist.close();
 

@@ -13,7 +13,7 @@ demostrador ni mezcla desarrollo inicial, continuidad y costes de terceros.
 ### 1. Estado de validación
 
 **Validación inicial de mercado.** Las referencias públicas son actuales y el
-suelo interno está calculado, pero todavía faltan horas reales de tres entregas
+suelo operativo está estimado, pero todavía faltan horas reales de tres entregas
 y evidencia de disposición a pagar. No debe llamarse «oferta validada».
 
 ### 2. Bandas comparables
@@ -26,25 +26,28 @@ y evidencia de disposición a pagar. No debe llamarse «oferta validada».
 - agenda SaaS para profesionales: 15–40 €/mes, normalmente autoservicio;
 - mantenimiento web: aproximadamente 60–200 €/mes.
 
-### 3. Suelo interno y margen
+### 3. Coste operativo real y margen
 
-El cálculo usa 55 €/h y un colchón de riesgo del 20 %. Los precios normales de
-Pulso y Veïnat dejan alrededor de un 29–31 % sobre ese suelo; los pilotos de
-lanzamiento quedan prácticamente en el suelo a cambio de aprendizaje medible.
-Los proyectos web y de automatización
-iniciales dejan entre un 11 y un 14 %, por lo que el alcance debe mantenerse
-especialmente acotado.
+El cálculo separa el gasto de caja de las horas humanas de Eloy. La base técnica,
+los componentes reutilizables y el trabajo autónomo de Chia no se vuelven a
+facturar como si fueran decenas de horas humanas en cada implantación. El suelo
+económico cuenta únicamente descubrimiento, decisiones, revisión, entrega y
+soporte humano a 55 €/h, costes técnicos directos estimados y un 20 % de riesgo.
+
+Con este criterio, los precios siguen remunerando el tiempo humano y financian
+producto, ventas y evolución, pero ya no trasladan al primer cliente todo el
+coste teórico de construir la plataforma desde cero.
 
 ### 4. Tarifas recomendadas
 
-- diagnóstico: 690 €;
-- web: 1.690 €, 3.200 € o desde 4.900 €;
-- asistente comercial: 1.490 € + 89 €/mes;
-- automatización: 1.490 €, 2.990 € o desde 4.990 €;
-- Pulso piloto de lanzamiento: desde 2.250 € + 149 €/mes;
-- Veïnat piloto de lanzamiento de cuatro semanas: 3.950 €;
-- microherramienta interactiva: desde 1.490 €;
-- cambios fuera de alcance: 75 €/h.
+- diagnóstico: 390 €;
+- web: 990 €, 1.890 € o desde 2.990 €;
+- asistente comercial: 890 € + 69 €/mes;
+- automatización: 890 €, 1.790 € o desde 2.990 €;
+- Pulso piloto de lanzamiento: desde 1.390 € + 99 €/mes;
+- Veïnat piloto de lanzamiento de cuatro semanas: 2.450 €;
+- microherramienta interactiva: desde 790 €;
+- cambios fuera de alcance: 65 €/h.
 
 ### 5. Inclusiones, exclusiones y exceso
 
@@ -74,13 +77,13 @@ Entrecapa vende tres resultados:
 
 | Línea | Estado | Precio de entrada |
 |---|---|---:|
-| Diagnóstico de proceso | Vendible | 690 € |
-| Web con identidad propia | Vendible | 1.690 € |
-| Automatización acotada | Vendible | 1.490 € |
-| Asistente comercial para web | Piloto vendible | 1.490 € + 89 €/mes |
-| Pulso para profesionales | Piloto acompañado | 2.250 € + 149 €/mes |
-| Veïnat para gestorías | Piloto acompañado | 3.950 € |
-| Herramienta interactiva a medida | Vendible | desde 1.490 € |
+| Diagnóstico de proceso | Vendible | 390 € |
+| Web con identidad propia | Vendible | 990 € |
+| Automatización acotada | Vendible | 890 € |
+| Asistente comercial para web | Piloto vendible | 890 € + 69 €/mes |
+| Pulso para profesionales | Piloto acompañado | 1.390 € + 99 €/mes |
+| Veïnat para gestorías | Piloto acompañado | 2.450 € |
+| Herramienta interactiva a medida | Vendible | desde 790 € |
 
 ### Activos que prueban capacidad, pero no deben venderse aún como producto
 
@@ -109,8 +112,10 @@ trabaja entre demasiadas herramientas, pero todavía no sabe qué construir.
 - documento de conclusiones y reunión de devolución;
 - una ronda de correcciones.
 
-**Tarifa:** **690 €**. Si se contrata una implantación superior a 2.500 € en los
-30 días siguientes, se descuentan **350 €** del proyecto.
+**Tarifa:** **390 €**. No existe un descuento posterior automático. Si el mapa
+evita trabajo duplicado en una implantación contratada durante los 30 días
+siguientes, la propuesta puede reconocer hasta **150 €** de reutilización
+documentada, siempre que las horas posteriores disminuyan en la misma medida.
 
 **No incluye:** auditoría jurídica, fiscal, laboral o de ciberseguridad; acceso
 masivo a sistemas; ni desarrollo de software.
@@ -122,7 +127,7 @@ masivo a sistemas; ni desarrollo de software.
 Entrecapa no vende una plantilla aislada. La web se diseña para explicar el
 proyecto, convertir visitas en conversaciones o conectarse con la operativa.
 
-#### Web Esencial · 1.690 €
+#### Web Esencial · 990 €
 
 - una página principal de hasta seis bloques;
 - diseño responsive con identidad aportada por el cliente;
@@ -135,7 +140,7 @@ proyecto, convertir visitas en conversaciones o conectarse con la operativa.
 El cliente aporta textos, identidad e imágenes finales. La adaptación editorial
 profunda, fotografía, copy completo y traducciones se presupuestan aparte.
 
-#### Web Identidad · 3.200 €
+#### Web Identidad · 1.890 €
 
 - hasta seis páginas o recorridos equivalentes;
 - dirección visual propia y adaptación editorial del contenido;
@@ -144,7 +149,7 @@ profunda, fotografía, copy completo y traducciones se presupuestan aparte.
 - tres rondas de revisión;
 - publicación, documentación y sesión de entrega.
 
-#### Web Operativa · desde 4.900 €
+#### Web Operativa · desde 2.990 €
 
 Todo lo anterior más una función operativa: reservas, área privada, catálogo,
 pagos, biblioteca, herramienta interactiva o conexión con otro sistema. El
@@ -154,11 +159,11 @@ precio final depende de usuarios, integraciones, permisos y datos a migrar.
 
 | Plan | Cuota | Incluye |
 |---|---:|---|
-| Cuidado | 89 €/mes | monitorización, copias, actualizaciones y 30 min de soporte |
-| Evolución | 149 €/mes | lo anterior y 90 min de cambios menores |
-| Prioridad | 289 €/mes | lo anterior, 3 h de cambios y respuesta prioritaria laborable |
+| Cuidado | 59 €/mes | monitorización, copias, actualizaciones y 20 min de soporte |
+| Evolución | 119 €/mes | lo anterior y 60 min de cambios menores |
+| Prioridad | 229 €/mes | lo anterior, 2 h de cambios y respuesta prioritaria laborable |
 
-No se ofrece soporte ilimitado. El exceso se factura a **75 €/h**, en bloques
+No se ofrece soporte ilimitado. El exceso se factura a **65 €/h**, en bloques
 mínimos de 30 minutos. Dominio, correo, licencias y servicios externos quedan a
 nombre del cliente y se pagan aparte.
 
@@ -170,7 +175,7 @@ Un comercial digital acotado que explica la oferta, entiende el contexto y lleva
 a una conversación humana. No entrega consultoría completa, no promete por la
 empresa y no ejecuta acciones sin confirmación.
 
-#### Asistente Web · 1.490 € + 89 €/mes
+#### Asistente Web · 890 € + 69 €/mes
 
 - conversación en una web;
 - conocimiento de hasta 25 páginas o documentos de oferta;
@@ -179,13 +184,13 @@ empresa y no ejecuta acciones sin confirmación.
 - límites temáticos, privacidad, monitorización y ajustes mensuales;
 - hasta 500 conversaciones al mes.
 
-#### Asistente Conectado · 2.490 € + 169 €/mes
+#### Asistente Conectado · 1.490 € + 129 €/mes
 
 Todo lo anterior más una conexión de salida: CRM, hoja de cálculo, formulario,
 agenda o buzón comercial; resumen estructurado de cada oportunidad y hasta 1.500
 conversaciones al mes.
 
-#### Complemento para Pulso · 990 € + 69 €/mes
+#### Complemento para Pulso · 590 € + 49 €/mes
 
 Se añade a una implantación activa de Pulso y utiliza su catálogo público para
 orientar hacia servicios, bonos, programas o una conversación con el
@@ -200,7 +205,7 @@ y mensajería de terceros se cobran al coste y requieren sus propias cuentas.
 
 ### 2.4 Automatización e integración
 
-#### Flujo concreto · 1.490 €
+#### Flujo concreto · 890 €
 
 - un disparador;
 - hasta dos herramientas;
@@ -212,7 +217,7 @@ y mensajería de terceros se cobran al coste y requieren sus propias cuentas.
 Ejemplos: formulario a CRM, resumen de reuniones, clasificación de solicitudes,
 alta de clientes o preparación de correos.
 
-#### Proceso operativo · 2.990 €
+#### Proceso operativo · 1.790 €
 
 - un proceso de principio a fin;
 - hasta tres sistemas o fuentes;
@@ -220,18 +225,18 @@ alta de clientes o preparación de correos.
 - panel o informe mínimo de seguimiento;
 - pruebas de aceptación y cuatro semanas de acompañamiento.
 
-#### Integración a medida · desde 4.990 €
+#### Integración a medida · desde 2.990 €
 
 Para conexión directa entre sistemas, permisos complejos, migración, robot donde
 no existe API o varios recorridos relacionados.
 
 #### Continuidad
 
-- monitorización básica: **59 €/mes**;
-- operación acompañada: **149 €/mes**, con 60 min de soporte;
-- integración crítica: **249 €/mes**, con 120 min y respuesta prioritaria.
+- monitorización básica: **39 €/mes**;
+- operación acompañada: **99 €/mes**, con 45 min de soporte;
+- integración crítica: **189 €/mes**, con 90 min y respuesta prioritaria.
 
-El trabajo fuera de alcance se factura a **75 €/h**. Las licencias y consumos de
+El trabajo fuera de alcance se factura a **65 €/h**. Las licencias y consumos de
 automatización, IA, correo o mensajería se contratan a nombre del cliente.
 
 ---
@@ -247,8 +252,8 @@ su operativa sin obligar a que todas las marcas tengan la misma web.
 
 #### Pulso Base
 
-**Precio normal objetivo:** 3.200 € de implantación + 149 €/mes.<br>
-**Precio de lanzamiento (≈ −30 %):** **2.250 € + 149 €/mes**.
+**Precio normal objetivo:** 1.990 € de implantación + 99 €/mes.<br>
+**Precio de lanzamiento (≈ −30 %):** **1.390 € + 99 €/mes**.
 
 - servicios y disponibilidad;
 - reservas sin solapamiento;
@@ -257,12 +262,12 @@ su operativa sin obligar a que todas las marcas tengan la misma web.
 - portal de cliente mediante enlace seguro;
 - panel profesional, bloqueos y cancelaciones;
 - adaptación visual básica y puesta en marcha;
-- 45 min de soporte mensual.
+- 30 min de soporte mensual.
 
 #### Pulso Pro
 
-**Precio normal objetivo:** 5.200 € + 249 €/mes.<br>
-**Precio de lanzamiento (≈ −30 %):** **3.650 € + 249 €/mes**.
+**Precio normal objetivo:** 3.490 € + 179 €/mes.<br>
+**Precio de lanzamiento (≈ −30 %):** **2.450 € + 179 €/mes**.
 
 Todo lo anterior más:
 
@@ -271,12 +276,12 @@ Todo lo anterior más:
 - productos, programas, ediciones, sesiones, aforo e inscripciones;
 - clientes, compras, citas y seguimiento de pagos;
 - biblioteca de recursos con acceso por cliente o programa;
-- 90 min de soporte mensual.
+- 60 min de soporte mensual.
 
 #### Pulso Conecta
 
-**Precio normal objetivo:** 7.900 € + 399 €/mes.<br>
-**Precio de lanzamiento (≈ −30 %):** **5.550 € + 399 €/mes**.
+**Precio normal objetivo:** 4.990 € + 299 €/mes.<br>
+**Precio de lanzamiento (≈ −30 %):** **3.490 € + 299 €/mes**.
 
 Todo lo anterior más:
 
@@ -286,7 +291,7 @@ Todo lo anterior más:
 - perfil de estilo, revisión opcional con IA y recursos multimedia;
 - conexión segura para un agente profesional mediante MCP;
 - asistente comercial integrado;
-- 180 min de soporte mensual.
+- 120 min de soporte mensual.
 
 #### Condiciones del piloto Pulso
 
@@ -303,7 +308,7 @@ terceros. A cambio se requiere:
 La permanencia mínima propuesta es de tres meses desde la puesta en marcha para
 cubrir onboarding y observación. Stripe, Google Workspace, Brevo, Buffer,
 Manychat, dominio, correo y otros terceros se pagan aparte y quedan bajo control
-del cliente. El exceso de soporte se factura a **75 €/h**.
+del cliente. El exceso de soporte se factura a **65 €/h**.
 
 ---
 
@@ -317,8 +322,8 @@ fiscalidad, comunicaciones oficiales ni criterio jurídico.
 
 #### Piloto de cuatro semanas
 
-**Precio normal:** 5.600 €.<br>
-**Precio de lanzamiento (≈ −30 %):** **3.950 €**.
+**Precio normal:** 3.490 €.<br>
+**Precio de lanzamiento (≈ −30 %):** **2.450 €**.
 
 Incluye:
 
@@ -331,14 +336,14 @@ Incluye:
 - decisión al cierre: continuar, ajustar o detener.
 
 Una continuidad posterior se propondrá solo si el ahorro es observable. Como
-hipótesis inicial: **desde 349 €/mes** para una gestoría pequeña, con hasta dos
-horas de soporte; todavía no es una tarifa validada.
+hipótesis inicial: **desde 249 €/mes** para una gestoría pequeña, con hasta 90
+minutos de soporte; todavía no es una tarifa validada.
 
 ---
 
 ### 2.7 Herramientas interactivas y microproductos
 
-**Desde 1.490 €** para una herramienta de una sola función y sin cuentas de
+**Desde 790 €** para una herramienta de una sola función y sin cuentas de
 usuario: calculador, rueda interactiva, cuestionario, configurador, visor o
 generador de documento.
 
@@ -373,9 +378,9 @@ Referencias públicas consultadas el 16 de noviembre de 2026:
 
 | Categoría | Referencia publicada | Lectura para Entrecapa |
 |---|---|---|
-| Web profesional | 1.800–4.000 €; premium 4.000–7.000 € | Web Identidad y Operativa quedan dentro de mercado |
-| Automatización | 1.900–4.500 € por automatización; 300–500 €/mes opcionales | Los paquetes acotados son competitivos; el soporte de Entrecapa es más limitado |
-| Asistente web a medida | 890 € + 79 €/mes; conectado 1.890 € + 229 €/mes | La propuesta de Entrecapa está alineada y prima personalización |
+| Web profesional | 1.800–4.000 €; premium 4.000–7.000 € | Entrecapa entra por debajo de la banda para facilitar las primeras ventas |
+| Automatización | 1.900–4.500 € por automatización; 300–500 €/mes opcionales | Los paquetes acotados entran por debajo de banda gracias a componentes reutilizables |
+| Asistente web a medida | 890 € + 79 €/mes; conectado 1.890 € + 229 €/mes | El básico queda alineado y el conectado compite con una entrada menor |
 | Chatbot SaaS | 29 €/mes IVA incluido | No es comparable con implantación y conocimiento a medida; sí marca el suelo SaaS |
 | Agenda SaaS | 15–40 €/mes | Pulso necesita justificar su implantación mediante identidad, integración y operación más amplia |
 | Mantenimiento web | aproximadamente 60–200 €/mes | Cuidado y Evolución quedan dentro de banda |
@@ -397,34 +402,54 @@ Fuentes directas:
 - Atendyo, chatbot web y WhatsApp:
   <https://atendyo.com/precios>
 
-## 4. Suelo interno y margen
+## 4. Coste operativo real y margen
 
-Supuestos iniciales:
+### Qué se considera coste
 
-- coste objetivo de trabajo: **55 €/h**;
-- colchón de riesgo: **20 %** en proyectos con materiales, aprobaciones,
-  integraciones o migración;
-- infraestructura, modelos y licencias fuera del precio cuando varían por
-  cliente;
-- el suelo no incluye beneficio adicional: solo tiempo y riesgo esperado.
+- **Gasto directo de caja:** infraestructura incremental, consumo técnico y
+  pequeños servicios necesarios para implantar y probar.
+- **Tiempo humano:** solo las horas efectivas de Eloy en descubrimiento,
+  decisiones, revisión, reuniones, aceptación y entrega, valoradas a **55 €/h**.
+- **Riesgo:** un **20 %** sobre tiempo y gasto directo para absorber retrabajo e
+  incidencias razonables.
+- **Base reutilizable:** el trabajo autónomo de Chia y los componentes ya
+  construidos son capacidad e inversión de Entrecapa. No se imputan otra vez
+  como horas humanas completas a cada cliente.
 
-| Unidad | Horas estimadas | Suelo interno | Precio normal | Margen sobre precio |
-|---|---:|---:|---:|---:|
-| Diagnóstico | 10 h | 660 € | 690 € | 4 % |
-| Web Esencial | 22 h | 1.452 € | 1.690 € | 14 % |
-| Web Identidad | 42 h | 2.772 € | 3.200 € | 13 % |
-| Web Operativa | 65 h | 4.290 € | 4.900 € | 12 % |
-| Asistente Web | 20 h | 1.320 € | 1.490 € | 11 % |
-| Automatización concreta | 20 h | 1.320 € | 1.490 € | 11 % |
-| Pulso Base | 34 h | 2.244 € | 3.200 € | 30 % |
-| Pulso Pro | 55 h | 3.630 € | 5.200 € | 30 % |
-| Pulso Conecta | 82 h | 5.412 € | 7.900 € | 31 % |
-| Veïnat piloto | 60 h | 3.960 € | 5.600 € | 29 % |
+Licencias, dominio, correo, comisiones y consumo variable propios del cliente
+siguen fuera del precio. Las cifras directas son estimaciones prudentes hasta
+disponer de facturas y consumos de tres entregas reales.
 
-Los precios de lanzamiento del 30 % quedan prácticamente en el suelo interno:
-entre −0,3 % y 2,5 % según el paquete. Son condiciones estratégicas para los tres
-primeros pilotos, no un margen sostenible. No se deben aplicar sin las
-contraprestaciones del piloto ni mantener después de esas tres implantaciones.
+| Unidad | Horas humanas | Gasto directo estimado | Suelo económico con riesgo | Precio normal | Margen sobre precio |
+|---|---:|---:|---:|---:|---:|
+| Diagnóstico | 4 h | 20 € | 290 € | 390 € | 26 % |
+| Web Esencial | 5 h | 40 € | 380 € | 990 € | 62 % |
+| Web Identidad | 8 h | 80 € | 625 € | 1.890 € | 67 % |
+| Web Operativa | 12 h | 150 € | 975 € | 2.990 € | 67 % |
+| Asistente Web | 6 h | 60 € | 470 € | 890 € | 47 % |
+| Automatización concreta | 5 h | 40 € | 380 € | 890 € | 57 % |
+| Pulso Base | 5 h | 80 € | 430 € | 1.990 € | 78 % |
+| Pulso Pro | 8 h | 120 € | 675 € | 3.490 € | 81 % |
+| Pulso Conecta | 15 h | 250 € | 1.290 € | 4.990 € | 74 % |
+| Veïnat piloto | 15 h | 250 € | 1.290 € | 3.490 € | 63 % |
+
+Estos márgenes no son beneficio neto: deben sostener investigación de producto,
+actividad comercial, administración, horas no facturables y evolución de los
+componentes comunes. Aun así, los lanzamientos del 30 % quedan por encima del
+suelo económico: aproximadamente 69 % en Pulso Base, 72 % en Pro, 63 % en
+Conecta y 47 % en Veïnat.
+
+### Referencia de un caso combinado realista
+
+Una profesional individual que necesite una web con identidad y operativa
+acotada más una implantación Pulso Pro debería recibir una propuesta conjunta
+de alrededor de **4.500–6.000 €** de puesta en marcha, según integraciones y
+migración, más **179–249 €/mes**. Una referencia comercial sencilla para un
+primer piloto equivalente es **4.900 € + 249 €/mes**.
+
+Ese conjunto no suma mecánicamente dos catálogos: la misma toma de requisitos,
+identidad y entrega reduce horas duplicadas. Las funciones desarrolladas como
+producto general de Entrecapa tampoco se cargan enteras al primer cliente.
 
 ## 5. Reglas de inclusión, exclusión y exceso
 
@@ -434,7 +459,7 @@ contraprestaciones del piloto ni mantener después de esas tres implantaciones.
    presupuestan por separado.
 3. Todas las cuentas, dominios, datos y suscripciones quedan bajo control del
    cliente cuando el proveedor lo permita.
-4. No existe soporte ilimitado. El exceso general es **75 €/h**, con mínimo de
+4. No existe soporte ilimitado. El exceso general es **65 €/h**, con mínimo de
    30 minutos.
 5. Una ronda agrupa comentarios entregados de una vez. Nuevas decisiones de
    alcance no son correcciones.

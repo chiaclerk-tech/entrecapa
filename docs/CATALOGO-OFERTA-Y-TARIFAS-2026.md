@@ -29,8 +29,9 @@ y evidencia de disposición a pagar. No debe llamarse «oferta validada».
 ### 3. Suelo interno y margen
 
 El cálculo usa 55 €/h y un colchón de riesgo del 20 %. Los precios normales de
-Pulso y Veïnat dejan alrededor de un 29–31 % sobre ese suelo; los pilotos dejan
-un 6–10 % a cambio de aprendizaje medible. Los proyectos web y de automatización
+Pulso y Veïnat dejan alrededor de un 29–31 % sobre ese suelo; los pilotos de
+lanzamiento quedan prácticamente en el suelo a cambio de aprendizaje medible.
+Los proyectos web y de automatización
 iniciales dejan entre un 11 y un 14 %, por lo que el alcance debe mantenerse
 especialmente acotado.
 
@@ -40,8 +41,8 @@ especialmente acotado.
 - web: 1.690 €, 3.200 € o desde 4.900 €;
 - asistente comercial: 1.490 € + 89 €/mes;
 - automatización: 1.490 €, 2.990 € o desde 4.990 €;
-- Pulso piloto: desde 2.490 € + 149 €/mes;
-- Veïnat piloto de cuatro semanas: 4.200 €;
+- Pulso piloto de lanzamiento: desde 2.250 € + 149 €/mes;
+- Veïnat piloto de lanzamiento de cuatro semanas: 3.950 €;
 - microherramienta interactiva: desde 1.490 €;
 - cambios fuera de alcance: 75 €/h.
 
@@ -77,8 +78,8 @@ Entrecapa vende tres resultados:
 | Web con identidad propia | Vendible | 1.690 € |
 | Automatización acotada | Vendible | 1.490 € |
 | Asistente comercial para web | Piloto vendible | 1.490 € + 89 €/mes |
-| Pulso para profesionales | Piloto acompañado | 2.490 € + 149 €/mes |
-| Veïnat para gestorías | Piloto acompañado | 4.200 € |
+| Pulso para profesionales | Piloto acompañado | 2.250 € + 149 €/mes |
+| Veïnat para gestorías | Piloto acompañado | 3.950 € |
 | Herramienta interactiva a medida | Vendible | desde 1.490 € |
 
 ### Activos que prueban capacidad, pero no deben venderse aún como producto
@@ -247,7 +248,7 @@ su operativa sin obligar a que todas las marcas tengan la misma web.
 #### Pulso Base
 
 **Precio normal objetivo:** 3.200 € de implantación + 149 €/mes.<br>
-**Precio piloto:** **2.490 € + 149 €/mes**.
+**Precio de lanzamiento (≈ −30 %):** **2.250 € + 149 €/mes**.
 
 - servicios y disponibilidad;
 - reservas sin solapamiento;
@@ -261,7 +262,7 @@ su operativa sin obligar a que todas las marcas tengan la misma web.
 #### Pulso Pro
 
 **Precio normal objetivo:** 5.200 € + 249 €/mes.<br>
-**Precio piloto:** **3.990 € + 249 €/mes**.
+**Precio de lanzamiento (≈ −30 %):** **3.650 € + 249 €/mes**.
 
 Todo lo anterior más:
 
@@ -275,7 +276,7 @@ Todo lo anterior más:
 #### Pulso Conecta
 
 **Precio normal objetivo:** 7.900 € + 399 €/mes.<br>
-**Precio piloto:** **5.990 € + 399 €/mes**.
+**Precio de lanzamiento (≈ −30 %):** **5.550 € + 399 €/mes**.
 
 Todo lo anterior más:
 
@@ -289,8 +290,9 @@ Todo lo anterior más:
 
 #### Condiciones del piloto Pulso
 
-El descuento piloto es de aproximadamente 22–24 % sobre la implantación normal.
-A cambio se requiere:
+El descuento de lanzamiento es aproximadamente del 30 % sobre la implantación normal, se limita
+a los tres primeros pilotos y no reduce la cuota mensual ni los costes de
+terceros. A cambio se requiere:
 
 - una reunión semanal durante las primeras cuatro semanas;
 - permiso para medir tiempos y fricciones con datos anonimizados;
@@ -316,7 +318,7 @@ fiscalidad, comunicaciones oficiales ni criterio jurídico.
 #### Piloto de cuatro semanas
 
 **Precio normal:** 5.600 €.<br>
-**Precio piloto inicial:** **4.200 €**.
+**Precio de lanzamiento (≈ −30 %):** **3.950 €**.
 
 Incluye:
 
@@ -419,10 +421,10 @@ Supuestos iniciales:
 | Pulso Conecta | 82 h | 5.412 € | 7.900 € | 31 % |
 | Veïnat piloto | 60 h | 3.960 € | 5.600 € | 29 % |
 
-Los pilotos de Pulso dejan aproximadamente 9–10 % sobre el suelo y Veïnat cerca
-del 6 %. Son márgenes deliberadamente estrechos a cambio de aprendizaje. No se
-deben aplicar esos descuentos sin las contraprestaciones del piloto ni mantener
-el precio después de las primeras tres implantaciones.
+Los precios de lanzamiento del 30 % quedan prácticamente en el suelo interno:
+entre −0,3 % y 2,5 % según el paquete. Son condiciones estratégicas para los tres
+primeros pilotos, no un margen sostenible. No se deben aplicar sin las
+contraprestaciones del piloto ni mantener después de esas tres implantaciones.
 
 ## 5. Reglas de inclusión, exclusión y exceso
 

@@ -5,5 +5,8 @@ pages_build_output_dir = "."
 
 [env.production]
 
+[env.production.ai]
+binding = "AI"
+
 [ai]
 binding = "AI"

@@ -73,6 +73,29 @@ const repairedBody=await repaired.json();
 assert.doesNotMatch(repairedBody.reply,/99\.999/);
 assert.match(repairedBody.reply,/Web Esencial: 990 €/);
 
+modelResponse={
+  reply:'Un proceso operativo encaja con lo que describes y evitaría repetir el mismo dato en varias herramientas.',
+  stage:'qualify',
+  offer_contact:false,
+  recommended_offer:'automation_process',
+  include_price:false,
+  lead_summary:{business:'asesoría',need:'copiar datos entre correo y hojas',goal:'centralizar el trabajo del equipo'}
+};
+const handoff=await onRequestPost({
+  request:request({messages:[
+    {role:'user',content:'Tengo una asesoría.'},
+    {role:'assistant',content:'¿Qué os quita más tiempo?'},
+    {role:'user',content:'Copiamos datos de correos a varias hojas.'},
+    {role:'assistant',content:'¿Qué resultado buscáis?'},
+    {role:'user',content:'Centralizarlo para que el equipo no repita trabajo.'}
+  ]}),
+  env
+});
+const handoffBody=await handoff.json();
+assert.equal(handoffBody.offer_contact,true);
+assert.equal(handoffBody.stage,'handoff');
+assert.match(handoffBody.reply,/correo.*Eloy/i);
+
 const foreign=await onRequestPost({
   request:new Request('https://www.entrecapa.com/api/assistant',{
     method:'POST',headers:{origin:'https://example.com','content-type':'application/json'},body:'{}'

@@ -181,6 +181,20 @@ const parseModelResponse=result=>{
   };
 };
 
+const applyHandoffRules=(data,messages)=>{
+  const latest=messages.at(-1)?.content||'';
+  const contactRequested=/\b(contact(?:ar|o)?|hablar|llamad[ao]|reuni[oó]n|cita|correo|presupuesto)\b/i.test(latest);
+  const userTurns=messages.filter(message=>message.role==='user').length;
+  const qualified=userTurns>=3&&data.lead_summary.business&&data.lead_summary.need&&data.lead_summary.goal;
+  if(!contactRequested&&!qualified)return data;
+  data.offer_contact=true;
+  data.stage='handoff';
+  if(!/Eloy|correo|contact|hablar/i.test(data.reply)){
+    data.reply=`${data.reply}\n\nSi quieres, puedo dejarte preparado un correo para que Eloy continúe la conversación contigo.`;
+  }
+  return data;
+};
+
 export async function onRequestPost({request,env}){
   if(!allowedOrigin(request.headers.get('origin')))return json({error:'Origen no permitido.'},403);
   if(rateLimited(request))return json({error:'Demasiados mensajes seguidos. Espera unos minutos.'},429);
@@ -202,7 +216,7 @@ export async function onRequestPost({request,env}){
       top_p:0.9,
       response_format:{type:'json_schema',json_schema:responseSchema}
     });
-    return json(parseModelResponse(result));
+    return json(applyHandoffRules(parseModelResponse(result),messages));
   }catch{
     return json({error:'No he podido responder ahora mismo. Puedes intentarlo de nuevo en unos segundos.'},502);
   }

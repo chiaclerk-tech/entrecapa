@@ -141,7 +141,7 @@
         <div><small>ENTRECAPA · CONVERSACIÓN INICIAL</small><h2 id="ecAssistantTitle">Cuéntanos dónde se atasca.</h2></div>
         <button class="ec-assistant-close" id="ecAssistantClose" type="button" aria-label="Cerrar conversación">×</button>
       </header>
-      <div class="ec-assistant-status"><span aria-hidden="true"></span> Piloto activo · responde solo sobre Entrecapa</div>
+      <div class="ec-assistant-status"><span aria-hidden="true"></span> Piloto con IA · conversación inicial sobre Entrecapa</div>
       <div class="ec-assistant-messages" id="ecAssistantMessages" role="log" aria-live="polite" aria-relevant="additions"></div>
       <div class="ec-assistant-options" id="ecAssistantOptions" aria-label="Opciones de respuesta"></div>
       <form class="ec-assistant-form" id="ecAssistantForm" autocomplete="off">
@@ -149,7 +149,7 @@
         <textarea id="ecAssistantInput" rows="1" maxlength="700" placeholder="Escribe aquí…"></textarea>
         <button type="submit" aria-label="Enviar respuesta">Enviar</button>
       </form>
-      <p class="ec-assistant-privacy">No compartas datos sensibles. Nada sale de esta página hasta que prepares y envíes el correo desde tu aplicación.</p>
+      <p class="ec-assistant-privacy">La conversación se procesa para responder y no se guarda en este piloto. No compartas datos sensibles. Ningún correo se envía sin tu revisión.</p>
     </section>
   </aside>
   <script>
@@ -193,5 +193,5 @@
     window.addEventListener('resize',keepPageOnAxis,{passive:true});
     document.addEventListener('scroll',keepPageOnAxis,{passive:true});
   </script>
-  <script src="assets/entrecapa-assistant-v2.js" defer></script>
+  <script src="assets/entrecapa-assistant-v3.js" defer></script>
 </body></html>

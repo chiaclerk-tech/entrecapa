@@ -37,6 +37,10 @@ assert.match(captured.input.messages[0].content,/Contesta primero y de forma dir
 assert.match(captured.input.messages[0].content,/Una pregunta por turno como máximo/);
 assert.match(captured.input.messages[0].content,/pulso_pro: lanzamiento 2\.450 € \+ 179 €\/mes/);
 assert.match(captured.input.messages[0].content,/una sola oferta principal/i);
+assert.match(captured.input.messages[0].content,/programas con producto, ediciones, sesiones/i);
+assert.match(captured.input.messages[0].content,/borradores en Brevo sin envío automático/i);
+assert.match(captured.input.messages[0].content,/Veïnat es un expediente vivo y portable/i);
+assert.match(captured.input.messages[0].content,/No subas de nivel por acumular funciones/i);
 
 modelResponse={
   reply:'Por lo que cuentas, Pulso Pro parece el encaje más claro: reúne programas, pagos, plazas y recursos sin obligarte a coordinar varias herramientas.',

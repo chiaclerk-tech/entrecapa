@@ -81,7 +81,11 @@ const therapistSend=async value=>{
   await therapist.locator('#ecAssistantForm button[type="submit"]').click();
   await therapist.waitForFunction(expected=>document.querySelectorAll('.ec-message.bot:not(.typing)').length>expected,before);
 };
-await therapistSend('Soy terapeuta y vendo sesiones, bonos y programas con varias plazas. ¿Pulso podría ayudarme?');
+await therapistSend('Soy terapeuta y vendo sesiones, bonos y programas con varias plazas. ¿Qué incluye exactamente Pulso Pro en mi caso?');
+const pulsoDetail=await therapist.locator('.ec-message.bot:not(.typing)').last().textContent();
+const pulsoFeatureFamilies=[/bonos|saldo|cr[eé]ditos/i,/programas|ediciones|sesiones/i,/aforo|inscripciones/i,/recursos|biblioteca/i,/pagos|Stripe/i,/clientes|ficha/i].filter(pattern=>pattern.test(pulsoDetail)).length;
+assert.ok(pulsoFeatureFamilies>=3,`Pulso detail lacks product depth: ${pulsoDetail}`);
+assert.doesNotMatch(pulsoDetail,/historias cl[ií]nicas|comisiones de equipo|m[uú]ltiples cabinas/i);
 await therapistSend('Necesito cobrar, controlar inscripciones y compartir recursos. ¿Cuánto cuesta?');
 assert.equal(therapistReplies.at(-1).recommended_offer,'pulso_pro');
 assert.equal(therapistReplies.at(-1).include_price,true);
@@ -93,5 +97,25 @@ await therapist.locator('.ec-assistant-mail').waitFor({state:'visible',timeout:5
 await therapist.screenshot({path:'/tmp/entrecapa-assistant-v4-therapist-390.png',fullPage:true});
 await therapist.close();
 
+const veinat=await browser.newPage({viewport:{width:390,height:844}});
+await veinat.goto(baseUrl,{waitUntil:'networkidle'});
+await veinat.locator('#ecAssistantLauncher').click();
+const veinatInput=veinat.locator('#ecAssistantInput');
+const veinatBefore=await veinat.locator('.ec-message.bot:not(.typing)').count();
+await veinatInput.fill('Somos una gestoría de comunidades. Perdemos documentos, vencimientos e incidencias entre correos. ¿Qué hace Veïnat y qué no sustituye?');
+const veinatResponsePromise=veinat.waitForResponse(response=>response.url().endsWith('/api/assistant')&&response.ok());
+await veinat.locator('#ecAssistantForm button[type="submit"]').click();
+const veinatResponse=await veinatResponsePromise;
+const veinatResponseBody=await veinatResponse.json();
+await veinat.waitForFunction(expected=>document.querySelectorAll('.ec-message.bot:not(.typing)').length>expected,veinatBefore);
+const veinatDetail=await veinat.locator('.ec-message.bot:not(.typing)').last().textContent();
+assert.equal(veinatResponseBody.recommended_offer,'veinat');
+assert.match(veinatDetail,/document|expediente|vencimiento|incidencia/i);
+assert.match(veinatDetail,/no sustituye|no reemplaza|complementa/i);
+assert.match(veinatDetail,/contabilidad|banca|fiscal|jur[ií]dic/i);
+assert.ok((veinatDetail.match(/\?/g)||[]).length<=1,'Veïnat reply asks more than one question');
+await veinat.screenshot({path:'/tmp/entrecapa-assistant-v5-veinat-390.png',fullPage:true});
+await veinat.close();
+
 await browser.close();
-console.log(`assistant v4: ${widths.length} viewports, consultative flow and priced Pulso recommendation passed`);
+console.log(`assistant v5: ${widths.length} viewports, catalog depth, consultative flow, priced Pulso and Veïnat boundaries passed`);

@@ -27,6 +27,23 @@ for(const width of widths){
   await page.close();
 }
 
+const repeatPage=await browser.newPage({viewport:{width:390,height:844}});
+await repeatPage.goto(baseUrl,{waitUntil:'networkidle'});
+await repeatPage.locator('#ecAssistantLauncher').click();
+await repeatPage.getByRole('button',{name:'Qué hace Entrecapa'}).click();
+const repeatInput=repeatPage.locator('#ecAssistantInput');
+await repeatInput.fill('¿Qué hacéis exactamente?');
+await repeatPage.locator('#ecAssistantForm button[type="submit"]').click();
+const repeatBots=repeatPage.locator('.ec-message.bot');
+const firstAbout=await repeatBots.nth(2).textContent();
+const secondAbout=await repeatBots.nth(4).textContent();
+assert.notEqual(firstAbout,secondAbout,'repeated about question returned the same answer');
+await repeatInput.fill('¿Qué hacéis exactamente?');
+await repeatPage.locator('#ecAssistantForm button[type="submit"]').click();
+const thirdAbout=await repeatBots.nth(6).textContent();
+assert.notEqual(secondAbout,thirdAbout,'third repeated question returned the same answer');
+await repeatPage.close();
+
 const page=await browser.newPage({viewport:{width:390,height:844}});
 await page.goto(baseUrl,{waitUntil:'networkidle'});
 await page.locator('#ecAssistantLauncher').click();

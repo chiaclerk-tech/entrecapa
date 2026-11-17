@@ -38,7 +38,7 @@
     busy=value;
     input.disabled=value;
     submit.disabled=value;
-    submit.textContent=value?'…':'Enviar';
+    submit.textContent=value?'…':'ENVIAR';
   };
 
   const showTyping=()=>addMessage('Escribiendo…','bot','typing');
@@ -118,12 +118,13 @@
   };
 
   const intro=()=>{
-    addMessage('Hola. Soy el asistente de Entrecapa. Puedo ayudarte a ver si lo que necesitas encaja con nosotros y, si tiene sentido, preparar una conversación con Eloy.');
-    addMessage('Cuéntame: ¿qué te gustaría mejorar?');
+    addMessage('Hola. Creamos webs para ayudarte a vender, automatizaciones para quitarte trabajo repetitivo y herramientas a medida para tu negocio.');
+    addMessage('Cuéntame qué quieres poner en marcha o qué tarea te está quitando tiempo. No necesitas tener clara la solución ni saber de tecnología para empezar.');
     setOptions([
-      {label:'Tengo un negocio y una idea'},
-      {label:'Hay un proceso que se atasca'},
-      {label:'Quiero saber qué hacéis'}
+      {label:'Necesito una web'},
+      {label:'Quiero automatizar una tarea'},
+      {label:'Tengo una idea'},
+      {label:'Quiero conocer Entrecapa'}
     ]);
   };
 

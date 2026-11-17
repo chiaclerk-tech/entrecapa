@@ -15,8 +15,19 @@ for(const width of widths){
   assert.equal(await page.locator('#ecAssistantPanel').isHidden(),true);
   await page.locator('#ecAssistantLauncher').click();
   await page.locator('#ecAssistantPanel').waitFor({state:'visible'});
+  assert.equal(await page.locator('#ecAssistantLauncher span').last().textContent(),'Cuéntanos qué necesitas');
+  assert.equal(await page.locator('.ec-assistant-header small').textContent(),'ENTRECAPA · DE LA IDEA A LA SOLUCIÓN');
+  assert.equal(await page.locator('#ecAssistantTitle').textContent(),'Hagamos que tu negocio avance.');
+  assert.match(await page.locator('.ec-assistant-status').textContent(),/Asistente con IA de Entrecapa/);
   assert.equal(await page.locator('.ec-message.bot').count(),2);
-  assert.equal(await page.locator('#ecAssistantOptions button').count(),3);
+  assert.deepEqual(await page.locator('#ecAssistantOptions button').allTextContents(),[
+    'Necesito una web',
+    'Quiero automatizar una tarea',
+    'Tengo una idea',
+    'Quiero conocer Entrecapa'
+  ]);
+  assert.equal(await page.locator('#ecAssistantInput').getAttribute('placeholder'),'Cuéntame qué tienes en mente…');
+  assert.equal(await page.locator('#ecAssistantForm button[type="submit"]').textContent(),'ENVIAR');
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-document.documentElement.clientWidth);
   assert.ok(overflow<=0,`horizontal overflow ${overflow}px at ${width}`);
   const panel=await page.locator('#ecAssistantPanel').boundingBox();

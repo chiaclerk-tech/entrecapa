@@ -134,20 +134,20 @@
   <aside class="ec-assistant" id="entrecapaAssistant" aria-label="Asistente de Entrecapa">
     <button class="ec-assistant-launcher" id="ecAssistantLauncher" type="button" aria-expanded="false" aria-controls="ecAssistantPanel">
       <span class="ec-assistant-launcher-mark" aria-hidden="true"></span>
-      <span>¿Tienes algo que mejorar?</span>
+      <span>Cuéntanos qué necesitas</span>
     </button>
     <section class="ec-assistant-panel" id="ecAssistantPanel" role="dialog" aria-modal="false" aria-labelledby="ecAssistantTitle" hidden>
       <header class="ec-assistant-header">
-        <div><small>ENTRECAPA · CONVERSACIÓN INICIAL</small><h2 id="ecAssistantTitle">Cuéntanos dónde se atasca.</h2></div>
+        <div><small>ENTRECAPA · DE LA IDEA A LA SOLUCIÓN</small><h2 id="ecAssistantTitle">Hagamos que tu negocio avance.</h2></div>
         <button class="ec-assistant-close" id="ecAssistantClose" type="button" aria-label="Cerrar conversación">×</button>
       </header>
-      <div class="ec-assistant-status"><span aria-hidden="true"></span> Piloto con IA · conversación inicial sobre Entrecapa</div>
+      <div class="ec-assistant-status"><span aria-hidden="true"></span> Asistente con IA de Entrecapa</div>
       <div class="ec-assistant-messages" id="ecAssistantMessages" role="log" aria-live="polite" aria-relevant="additions"></div>
       <div class="ec-assistant-options" id="ecAssistantOptions" aria-label="Opciones de respuesta"></div>
       <form class="ec-assistant-form" id="ecAssistantForm" autocomplete="off">
         <label class="sr-only" for="ecAssistantInput">Escribe tu respuesta</label>
-        <textarea id="ecAssistantInput" rows="1" maxlength="700" placeholder="Escribe aquí…"></textarea>
-        <button type="submit" aria-label="Enviar respuesta">Enviar</button>
+        <textarea id="ecAssistantInput" rows="1" maxlength="700" placeholder="Cuéntame qué tienes en mente…"></textarea>
+        <button type="submit" aria-label="Enviar respuesta">ENVIAR</button>
       </form>
       <p class="ec-assistant-privacy">La conversación se procesa para responder y no se guarda en este piloto. No compartas datos sensibles. Ningún correo se envía sin tu revisión.</p>
     </section>
@@ -193,5 +193,5 @@
     window.addEventListener('resize',keepPageOnAxis,{passive:true});
     document.addEventListener('scroll',keepPageOnAxis,{passive:true});
   </script>
-  <script src="assets/entrecapa-assistant-v3.js" defer></script>
+  <script src="assets/entrecapa-assistant-v3.js?v=20261117-copy" defer></script>
 </body></html>
